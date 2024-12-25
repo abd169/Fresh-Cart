@@ -7,6 +7,6 @@ export default defineConfig({
 <<<<<<< HEAD
   base:"/my-vue-app/"
 =======
-  base:"CartFresh"
+  base:"Fresh-Cart-"
 >>>>>>> 07739d3 (first commit)
 })
