@@ -4,6 +4,7 @@ import Loading from "../../components/Loading/Loading";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../../Context/Cart.context";
 import ReactImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Cart from "../../components/Cart/Cart";
