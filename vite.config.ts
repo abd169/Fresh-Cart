@@ -10,7 +10,7 @@ const allExternal = [
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base:"/",
+  base:"/freachCart-/",
   build: {
     outDir: 'dist',
     rollupOptions: {
