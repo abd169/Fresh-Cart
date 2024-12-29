@@ -2,7 +2,7 @@
   "name": "my-vue-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://abd169.github.io/freachCart-.git",
+  "homepage": "https://abd169.github.io/freachCart-",
   "type": "module",
   "scripts": {
     "dev": "vite",
