@@ -1,24 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-// import { builtinModules } from 'module';
-
-// const allExternal = [
-//   ...builtinModules,
-//   ...builtinModules.map((m) => `node:${m}`)
-// ];
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base:"/Fresh-Cart/",
-  // build: {
-  //   outDir: 'dist',
-  //   rollupOptions: {
-  //     input: './index.html',
-  //     external: [
-  //       'fsevents',
-  //       ...allExternal,  // يمكن تحديد الحزم التي تستخدمها فقط
-  //     ],
-    // },
-  // },
+ 
 })
