@@ -22,46 +22,44 @@ import Offline from './components/Offline/Offline';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
-const router = createBrowserRouter([
-  { 
-    path: "/", 
-    element: (
-      <ProtectedRoute>
-        <Layout />
-      </ProtectedRoute>
-    ),
-    children: [
-      
-
-      { index: true, element: <Home /> },
-      
-      { path: "cart", element: <Cart /> },
-      { path: "product/:id", element: <ProductDetals /> },
-      { path: "products", element: <ProductCart /> },
-      { path: "checkout", element: <Checkout /> },
-      { path: "allorders", element: <Orders /> },
-      { path: "Categories", element: <Categrys /> },
-      { path: "Brand", element: <Brands /> },
-      { path: "Brand/:id", element: <BrandDetails /> },
-    ],
-  },
-  {
-    path: "/",
-    element: (
-      <GuestRoute>
-        <Layout />
-      </GuestRoute>
-    ),
-    children: [
-      { path: "Signup", element: <Signup /> },
-      { path: "Login", element: <Login /> },
-    ],  
-  },
-  {
-    path: "*", // مسار عام
-    element: <NotFound />, // صفحة تعرض الخطأ أو 404
-  },
-]); 
+const router = createBrowserRouter(
+  [
+    {
+      //  basename: "/freachCart-/",
+      path: "/",
+      element: (
+        <ProtectedRoute>
+          <Layout />
+        </ProtectedRoute>
+      ),
+      children: [
+        { index: true, element: <Home /> },
+        { path: "cart", element: <Cart /> },
+        { path: "product/:id", element: <ProductDetals /> },
+        { path: "products", element: <ProductCart /> },
+        { path: "checkout", element: <Checkout /> },
+        { path: "allorders", element: <Orders /> },
+        { path: "Categories", element: <Categrys /> },
+        { path: "Brand", element: <Brands /> },
+        { path: "Brand/:id", element: <BrandDetails /> },
+      ],
+    },
+    {
+      // basename: "/freachCart-/",
+      path: "/",
+      element: (
+        <GuestRoute>
+          <Layout />
+        </GuestRoute>
+      ),
+      children: [
+        { path: "Signup", element: <Signup /> },
+        { path: "Login", element: <Login /> },
+      ],
+    },
+  ],
+  
+);
 
 function NotFound() {
   return (
@@ -70,7 +68,6 @@ function NotFound() {
       <p>عذراً، لم نتمكن من العثور على الصفحة التي تبحث عنها.</p>
     </div>
   );
-  { basename: "/freachCart-" } 
 }
 
 function App() {
@@ -87,8 +84,8 @@ function App() {
         </UseProvider>
       </QueryClientProvider>
       <Offline>
-        <div className='p-4 fixed right-8 bottom-8 z-50 rounded-lg shadow bg-gray-200 text-gary-600 font-semibold'>
-          <i className="fa-solid fa-wifi mr-2"></i>
+        <div className='fixed z-50 p-4 font-semibold bg-gray-200 rounded-lg shadow right-8 bottom-8 text-gary-600'>
+          <i className="mr-2 fa-solid fa-wifi"></i>
           <span>Check Your Internet Connection</span>
         </div>
       </Offline>
